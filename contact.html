@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ciaran Lewis">
+    <link rel="icon" href="static/favicon.png" type="image/png">
+    <title>JF Plumbing & Heating</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="js/main.js" defer></script>
+</head>
+<body class="contact-body">
+  <header>
+   <div class="header-container">
+      <a href="index.html"><img src="static/logo.png" alt="JF Plumbing Logo" class="logo"></a>
+      <!-- Mobile version collapsable navigation -->
+      <div class="mobile-nav-wrapper">
+        <button class="menu-toggle" aria-label="Toggle navigation">
+        ☰
+        </button> 
+        <nav class="mobile-nav">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="gallery.html" class="nav-item">Gallery</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+        </nav>
+      </div>
+      <!-- Mobile version collapsable socials -->
+      <div class="mobile-socials-wrapper">
+        <button class="social-toggle" aria-label="Toggle socials">
+        +
+        </button>
+        <nav class="socials">
+          <a href="https://wa.me/+447368482481" class="mobile-social-icon" target="_blank" aria-label="WhatsApp">
+            <img src="static/whatsappWhite.png" alt="WhatsApp">
+          </a>
+          <a href="https://www.instagram.com/jf_plumbingheating?igsh=MWI4eGpreHZ6dHM4Yg==" class="mobile-social-icon" target="_blank" aria-label="Instagram">
+            <img src="static/instagramWhite.png" alt="Instagram">
+        </nav>
+        </div>
+      <!-- Desktop navigation -->
+      <div class="header-right">
+      <h1 class = "title"><a href="index.html">JF Plumbing & Heating</a></h1>
+      <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://wa.me/+447368482481" class="nav-social-icon" target="_blank" aria-label="WhatsApp">
+          <img src="static/whatsappWhite.png" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/jf_plumbingheating?igsh=MWI4eGpreHZ6dHM4Yg==" class="nav-social-icon" target="_blank" aria-label="Instagram">
+          <img src="static/instagramWhite.png" alt="Instagram">
+        </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+    <main class="contact-main">
+        <h1 class="contact-text">Fill in the form to request a callback</h1>
+        <form class="callback-form" action="https://formspree.io/f/xzzrywrv" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        
+            <button type="submit">Submit</button>
+          </form>
+          <div class="general-contact">
+            <div class="contact-item">
+              <h3>Email</h3>
+              <p>jf.plumbingheating@outlook.com</p>
+            </div>
+            <div class="contact-item">
+              <h3>Number</h3>
+              <p>+44 7368 482481</p>
+            </div>
+          </div>
+          
+
+
+    </main>
+    <footer>
+            <!-- Bottom navigation bar -->
+            <section class="bottom-nav" id="contact-footer">
+              <a href="gallery.html" class="nav-link">Gallery</a>
+              <a href="contact.html" class="nav-link">Contact</a>
+              <a href="https://wa.me/+447368482481" class="social-icon" target="_blank" aria-label="WhatsApp">
+                <img src="static\whatsapp.png" alt="WhatsApp">
+              </a>
+              <a href="https://www.instagram.com/jf_plumbingheating?igsh=MWI4eGpreHZ6dHM4Yg==" class="social-icon" target="_blank" aria-label="Instagram">
+                <img src="static\instagram.png" alt="Instagram">
+              </a>
+              <p>&copy; 2025 JF Plumbing & Heating</p>
+
+            </section>
+    </footer>
+  </body>
+  </html>

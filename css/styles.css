@@ -500,3 +500,95 @@ h2{
     height: 35px;
   }
 }
+
+/* CONTACT PAGE STYLING */
+.contact-body{
+  background-color:#e67f40 ;
+}
+.contact-main{
+  justify-items: center;
+  background-color:#e67f40;
+}
+
+
+.contact-text{
+  color: white;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.callback-form-section {
+  padding: 2em;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.callback-form-section h2 {
+  color: #e67f40;
+  margin-bottom: 1em;
+}
+
+.callback-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.callback-form label {
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+
+.callback-form input,
+.callback-form textarea {
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.callback-form button {
+  padding: 0.75em;
+  background-color: #000;
+  color: white;
+  outline: white solid .25em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 1em;
+}
+
+.callback-form button:hover {
+  background-color: #e67f40;
+}
+
+.general-contact {
+  width: 100%;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.contact-item {
+  margin-bottom: 1.5em;
+}
+
+.contact-item h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #e67f40;
+}
+
+.contact-item p {
+  margin: 0.3em 0 0;
+  font-size: 1.1em;
+  color: #fff;
+}
