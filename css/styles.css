@@ -233,7 +233,7 @@ header {
     object-fit: cover;
   
     /* Desktop background image */
-    background-image: ('static/landscape.jpg');
+    background-image: url('/static/landscape.jpg');
     background-size: cover;
     background-position: center;
     background-color: #000;
@@ -293,7 +293,7 @@ header {
 /* === Card Layout === */
 .service-card {
   flex: 1 1 clamp(250px, 30%, 350px); /* Grow/shrink between 250px and 350px, ideally ~30% of container */
-  max-width: 100%;
+  max-width: 350px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
