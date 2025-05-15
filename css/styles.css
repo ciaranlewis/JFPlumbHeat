@@ -237,10 +237,8 @@ header {
     object-fit: cover;
   
     /* Desktop background image */
-    /* background-image: url("/static/landscape.jpg");  */
     background-size: cover;
     background-position: center;
-    /* background-color: #000; */
   }
   
   .bg-video {
