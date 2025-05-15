@@ -511,7 +511,6 @@ h2{
   overflow: hidden;
 }
 
-
 .contact-text{
   color: white;
   padding-left: 0.5em;
@@ -575,7 +574,7 @@ h2{
   background-color: #000;
   color: white;
   text-align: center;
-  padding: 1em 1em;
+  padding: 1em;
 }
 
 .contact-item {
