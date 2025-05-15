@@ -600,7 +600,16 @@ h2{
   color: #fff;
 }
 
-img, h1, h2, h3, p {
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
