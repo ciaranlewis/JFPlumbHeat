@@ -599,3 +599,8 @@ h2{
   font-size: 1.1em;
   color: #fff;
 }
+
+img, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
