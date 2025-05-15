@@ -575,6 +575,9 @@ h2{
   color: white;
   text-align: center;
   padding: 1em;
+  display: flex column;
+  justify-content: center;
+  align-items: center;  
 }
 
 .contact-item {
