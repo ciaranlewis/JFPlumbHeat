@@ -571,6 +571,7 @@ h2{
 
 .general-contact {
   width: 100%;
+  max-width: 100%;
   background-color: #000;
   color: white;
   text-align: center;
