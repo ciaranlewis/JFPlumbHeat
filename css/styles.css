@@ -226,7 +226,7 @@ header {
   
   /* ---- VIDEO BACKGROUND AND OVERLAY STYLING ---- */
   .video-hero {
-    background-image: url(../static/landscape.jpg);
+    background-image: url('../static/landscape.jpg');
 
     position: relative;
     width: 100%;
