@@ -214,7 +214,9 @@ header {
   
   /* --- BUTTON STYLING ---- */
   .cta-button {
-    background: #007BFF;
+    background: #000;
+    outline: #e67f40 solid .25em;
+    border-radius: 1em;
     color: white;
     padding: 1em;
     text-decoration: none;
@@ -235,8 +237,10 @@ header {
     object-fit: cover;
   
     /* Desktop background image */
+    /* background-image: url("/static/landscape.jpg");  */
     background-size: cover;
     background-position: center;
+    /* background-color: #000; */
   }
   
   .bg-video {
