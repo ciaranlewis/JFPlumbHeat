@@ -584,6 +584,8 @@ h2{
 
 .contact-item {
   margin-bottom: 1.5em;
+  max-width: 100%;
+  text-align: center;
 }
 
 .contact-item h3 {
