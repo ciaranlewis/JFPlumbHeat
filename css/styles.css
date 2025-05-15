@@ -224,7 +224,7 @@ header {
   
   /* ---- VIDEO BACKGROUND AND OVERLAY STYLING ---- */
   .video-hero {
-    background-image: url('../static/landscape.jpg');
+    background-image: url(static/landscape.jpg);
 
     position: relative;
     width: 100%;
@@ -237,7 +237,6 @@ header {
     /* Desktop background image */
     background-size: cover;
     background-position: center;
-    background-color: #000;
   }
   
   .bg-video {
