@@ -508,6 +508,7 @@ h2{
 .contact-main{
   justify-items: center;
   background-color:#e67f40;
+  overflow: hidden;
 }
 
 
