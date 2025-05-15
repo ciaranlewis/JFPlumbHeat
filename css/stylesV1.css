@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Universal selector to add outlines to all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 0.1vw solid red;  */
+    background-color: #272727;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Flex container for header content */
+/* .header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 1vh 1vw; 
+    background-color: #f27819;
+
+} */
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+}
+
+/* Header styling */
+header {
+    padding: 2vh 2vw; /* Padding around the header content */
+    background-color: #000;
+}
+
+/* Logo styling */
+.logo {
+    max-width: 20vw; /* Set the width of the logo */
+    height: auto; /* Adjust height proportionally */
+    background-color: #000;
+}
+
+/* Navigation styling */
+.nav {
+    display: flex; /* Align nav items horizontally */
+    background-color: #000;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Navigation links styling */
+.nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fefefe; /* Text color */
+    background-color: #272727; /* Background color */
+    padding: 1vh 2vw; /* Padding around the text using vh and vw */
+    border-radius: 1vh; /* Rounded corners using vh */
+    font-size: 1.5vw; /* Font size using vw */
+    font-weight: 700; /* Bold text */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions for hover effects */
+    display: inline-block; /* Ensure padding and border-radius work */
+    margin-left: 1vw; /* Space between navigation items on the left */
+    margin-right: 1vw; /* Space between navigation items on the right */
+}
+
+/* Focus state for navigation links */
+.nav a:focus {
+    outline: 0.25vh solid #fff; /* Outline for focus state using vh */
+    outline-offset: 0.25vh; /* Space between the outline and the button using vh */
+}
+
+/* Hover effect for navigation links */
+.nav a:hover {
+    background-color: #e67f40; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* General link reset */
+a {
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove any border */
+    background: none; /* Remove any background color */
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Remove any margin */
+}
+
+/* Styling for the logo link */
+.logo-link {
+    display: inline-block; /* Ensure it behaves like an inline element but can accept width and height */
+    text-decoration: none; /* Remove underline specifically for logo-link */
+    border: none; /* Ensure no border is applied */
+    background: none; /* Ensure no background color is applied */
+}
+
+/* Ensure no additional styling for images within the logo-link */
+.logo-link img {
+    display: block; /* Remove any extra space below the image */
+}
+/*f57c1f - flame colour
+e96b21 - writing colour
+
+fefefe
+
+f47820
+
+c28a6d

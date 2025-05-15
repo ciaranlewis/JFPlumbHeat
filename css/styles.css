@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* --- Rules for the general components --- */
+html, body {
+  height: 100%;  /* Ensure full height of the page */
+}
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+    overflow-x: hidden;
+
+  }
+
+@media (min-width:850px) and (max-width:1125px){
+  body{
+    font-size: 1.5rem;
+  }  
+}
+
+  
+header {
+    background: #000;
+    color: white;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  main {
+    background-color: #e67f40;
+    padding-top: 1em;
+  }
+
+/* --- HEADER STYLING ---- */
+  .header-container {
+    display: flex;
+    align-items: stretch;
+  }
+  
+  /* Logo sits on left edge */
+  .logo {
+    height: 100%;
+    max-height: 25vh;
+    object-fit: contain;
+    padding: 0px;
+    background: #000;
+  }
+  
+  /* Right section: stacks title and nav */
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    flex: 1;
+  }
+  
+  /* Title styling */
+  .header-right h1 {
+    margin: 0;
+    font-size: 3em;
+  }
+
+  /* Navigation styling */
+  .desktop-nav {
+    margin-top: 0.5em;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center; 
+  }
+  
+  /* Navigation link styling */
+  .desktop-nav a{
+    color: white;
+    margin-right: 1em;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    align-items: center;
+  } 
+
+  .mobile-nav-wrapper {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    z-index: 1001;
+  }
+  
+  /* Hamburger Button Styles */
+  .menu-toggle {
+    display: none;
+    font-size: 2em;
+    background: #000;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 20%;
+  }
+  
+  /* Mobile Dropdown Menu */
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    margin-top: 0.5em;
+    border-radius: 15%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+  
+  .mobile-nav.active {
+    display: flex;
+  }
+  
+  .nav-item {
+    padding: 0.5em 1em;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+  }
+
+  .nav-social-icon{
+    object-fit: fill;
+    border-radius: 25%;
+  }
+
+  @media (min-width: 1126px) {
+  .mobile-socials-wrapper{
+    display: none;
+  }
+}
+
+/* Wrapper fixed at bottom-right */
+.mobile-socials-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column-reverse; /* button at bottom, icons above */
+  align-items: flex-end;
+  z-index: 1000;
+}
+
+/* Toggle button styling */
+.social-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 2em;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+/* .social-toggle:hover {
+  background: #e67f40;
+} */
+
+/* Icon container (hidden by default) */
+.socials {
+  display: none;
+  flex-direction: column;
+  margin-bottom: 10px; /* spacing above the button */
+}
+
+/* Show when active */
+.socials.active {
+  display: flex;
+}
+
+/* Individual icon links */
+.mobile-social-icon {
+  margin-top: 10px; /* space between icons */
+}
+.mobile-social-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+  @media (max-width: 1126px) {
+    .menu-toggle {
+      display: block;
+    }
+
+    .header-right {
+      display: none;
+    }
+
+    .logo {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      max-height: 15vh;
+    }
+  
+    .header-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  } 
+  
+  /* --- BUTTON STYLING ---- */
+  .cta-button {
+    background: #007BFF;
+    color: white;
+    padding: 1em;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1em;    
+  }
+  
+  /* ---- VIDEO BACKGROUND AND OVERLAY STYLING ---- */
+  .video-hero {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+  
+    /* Desktop background image */
+    background-image: url('/static/landscape.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #000;
+  }
+  
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    display: none; /* Hidden by default */
+  }
+  .video-overlay {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 2em;
+  }
+  
+
+  @media (max-width: 1126px) {
+    .video-hero {
+      background-image: none; /* Remove image on mobile */
+      z-index: 0;
+      height: 100vh;
+
+    }
+
+    .video-overlay h2 {
+      border-bottom: #e67f40 solid 0.1em;
+      
+    }
+    .video-overlay {
+      top: 30%;
+    }
+  
+    .portrait-video {
+      display: block;
+    }
+  }
+  
+  /* ---- SERVICES STYLING ----*/
+  /* === Services Grid === */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  padding: 2em;
+}
+
+/* === Card Layout === */
+.service-card {
+  flex: 1 1 clamp(250px, 30%, 350px); /* Grow/shrink between 250px and 350px, ideally ~30% of container */
+  max-width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.service-card img {
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+}
+
+/* === Card Content === */
+.card-content {
+  padding: 1em;
+}
+
+.card-content h3 {
+  margin: 0.5em 0;
+  font-size: 1.3em;
+  color: #e67f40;
+}
+
+.card-content p {
+  color: #333;
+  font-size: 0.95em;
+}
+
+#service-mobile{
+  display: none;
+}
+
+/* === Mobile View === */
+@media (max-width: 1126px) {
+  .services {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  #service-desk {
+    display: none;
+  }
+  
+  #service-mobile{
+    display: flex;
+  }
+
+  .service-card {
+    max-width: 100%;
+    flex: none;
+    height: 30vh;
+    position: relative;
+  }
+
+  .service-card img{
+    object-position: center center;
+      }
+
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1em;
+    background: #000;
+    color: white;
+  }
+
+  .card-content h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: white;
+  }
+
+  .card-content p {
+    display: none; /* Hide text on mobile */
+  }
+}
+
+h2{
+  color: white;
+  text-align: center;
+  padding-top: 1em;
+}
+
+/* === TESTIMONIALS SECTION === */
+.testimonials {
+  text-align: center;
+  background-color: #000;
+  padding-bottom: 1em;
+}
+
+.testimonials-blog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers items including in incomplete rows */
+  gap: 2em;
+  padding: 0em 2em;
+  max-width: fit-content;
+  margin: 0 auto;
+  background: #000;
+}
+
+
+
+
+.testimonial-post {
+  background: white;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  max-width: 25vw;;
+
+}
+
+.testimonial-post:hover {
+  transform: translateY(-4px);
+}
+
+.testimonial-post h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #e67f40;
+}
+
+.testimonial-post h4 {
+  margin: 0.5em 0 1em;
+  font-size: 1em;
+  color: #777;
+  font-weight: normal;
+}
+
+.testimonial-post p {
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.6;
+}
+
+@media (max-width: 1126px) {
+  .testimonials-blog{
+    padding: 0;
+  }
+
+  .testimonial-post {
+    max-width: none;
+    min-width: 80%;
+    margin-left: 1em;
+    margin-right:1em;
+  }
+}
+
+/* ---- Bottom navigation ---- */
+.bottom-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 1.5em 0;
+  background-color:#e67f40;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #000; /* Change color on hover */
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+  transform: scale(1.1); /* Scale icon on hover */
+}
+
+@media (max-width: 1126px) {
+  .bottom-nav {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .social-icon img {
+    width: 35px;
+    height: 35px;
+  }
+}
