@@ -625,7 +625,7 @@ h2{
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
+  }
 
 .gallery-block h2 {
   margin-bottom: 1em;
@@ -637,6 +637,8 @@ h2{
 }
 
 .gallery-swiper {
+  position: relative;
+
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
@@ -646,8 +648,9 @@ swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em;
-  padding-top: 0em;
+  padding-left: 10vw;
+  padding-right: 10vw;
+
 }
 
 swiper-slide img,
@@ -658,41 +661,25 @@ swiper-slide video {
   border-radius: 10px;
 }
 
-swiper-slide img{
-  padding-left: 2em;
-  padding-right: 2em;
-}
+
 
 
 /* Hide arrows by default */
 swiper-container::part(button-prev),
 swiper-container::part(button-next) {
-  display: none;
-}
+  display: block;
+  color: #f5f5f5;
+  font-size: 1.5rem;}
 
-/* Show arrows on screens wider than 768px */
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   swiper-container::part(button-prev),
   swiper-container::part(button-next) {
-    display: block;
-    color: #f5f5f5;
-    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding-right: 15vw;
+    padding-left: 15vw;
+
   }
 }
-
-/* @media (min-width:850px) and (max-width:1125px){
-  .gallery-block {
-    flex: 1 1 300px;
-    max-width: 40vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  swiper-slide img{
-    padding-left: 2em;
-    padding-right: 2em;
-  }
-  
-} */
