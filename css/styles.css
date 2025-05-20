@@ -648,8 +648,7 @@ swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 10vw;
-  padding-right: 10vw;
+
 
 }
 
@@ -680,6 +679,10 @@ swiper-container::part(button-next) {
     z-index: 10;
     padding-right: 15vw;
     padding-left: 15vw;
-
   }
+  swiper-slide {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  }
+
 }
