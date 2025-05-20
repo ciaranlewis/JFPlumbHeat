@@ -654,6 +654,12 @@ swiper-slide video {
   border-radius: 10px;
 }
 
+swiper-slide img{
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+
 /* Hide arrows by default */
 swiper-container::part(button-prev),
 swiper-container::part(button-next) {
