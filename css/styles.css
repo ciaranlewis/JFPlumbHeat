@@ -7,7 +7,7 @@ html, body {
 body {
   font-family: "avenir-next-lt-pro", sans-serif;
   font-weight: 2em;
-  font-style: normal;    margin: 0;
+  font-style: bold;    margin: 0;
   padding: 0;
   background: #f9f9f9;
   color: #333;
@@ -547,7 +547,7 @@ h2{
 }
 .contact-main{
   justify-items: center;
-  background-color:#e67f40;
+  background-color:#000;
   overflow: hidden;
 }
 
@@ -569,7 +569,8 @@ h2{
 }
 
 .callback-form {
-  max-width: 500px;
+  max-width: 50vw;
+  min-width: 25vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -581,7 +582,7 @@ h2{
 .callback-form label {
   text-align: left;
   font-weight: bold;
-  color: #333;
+  color: #e67f40;
 }
 
 .callback-form input,
@@ -594,15 +595,15 @@ h2{
 
 .callback-form button {
   padding: 0.75em;
-  background-color: #000;
+  background-color: #e67f40;
   color: white;
   outline: white solid .25em;
   border: none;
   border-radius: 5px;
   font-size: 1em;
-  cursor: pointer;
   transition: background 0.3s ease;
   margin-bottom: 1em;
+  font-family: "avenir-next-lt-pro", sans-serif;
 }
 
 .callback-form button:hover {
