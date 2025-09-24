@@ -46,6 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
+
+  const checkbox = document.getElementById('privacy-consent');
+  const submitButton = document.getElementById('submit-button');
+
+  // Enable/disable submit button based on checkbox
+  checkbox.addEventListener('change', () => {
+    submitButton.disabled = !checkbox.checked;
+  });
+
  
   
   

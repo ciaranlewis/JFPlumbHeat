@@ -41,7 +41,6 @@
          </nav>
          </div>
        <!-- Desktop navigation -->
-
     </div>
     <div class="navigation-links">
      <nav class="desktop-nav">
@@ -64,8 +63,20 @@
             
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
-        
-            <button type="submit">Submit</button>
+
+            <p class="privacy-notice">
+              By submitting this form, you consent to JF Plumbing and Heating collecting your details to respond to your enquiry. 
+              Your data is processed by <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener">Formspree</a> and retained only as long as necessary. 
+              For full details, please see our <a href="privacypolicy.html" target="_blank" rel="noopener">Privacy Policy</a>.
+            </p>
+            
+
+            <label>
+              <input type="checkbox" id="privacy-consent" name="privacy-consent" required>
+              I consent to my information being stored and used to respond to my inquiry.
+            </label>
+            
+            <button type="submit" id="submit-button" disabled>Submit</button>
           </form>
           <div class="general-contact">
             <div class="contact-item">

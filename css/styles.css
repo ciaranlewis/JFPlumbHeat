@@ -575,12 +575,17 @@ h2{
 
 .callback-form {
   min-width: 50vw;
+  max-width: 75vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1em;
   padding-left: 0.5em;
   padding-right: 0.5em;
+}
+
+.callback-form p{
+color: #ccc;
 }
 
 .callback-form label {
@@ -597,21 +602,34 @@ h2{
   font-size: 1em;
 }
 
+/* Normal button styling */
 .callback-form button {
   padding: 0.75em;
   background-color: #e67f40;
   color: white;
-  outline: white solid .25em;
+  outline: white solid 0.25em;
   border: none;
   border-radius: 5px;
   font-size: 1em;
-  transition: background 0.3s ease;
-  margin-bottom: 1em;
   font-family: "avenir-next-lt-pro", sans-serif;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-bottom: 1em;
+  cursor: pointer;
 }
 
-.callback-form button:hover {
+/* Hover effect for active button */
+.callback-form button:hover:enabled {
   background-color: #000;
+  transform: scale(1.02);
+}
+
+/* Disabled state */
+.callback-form button:disabled {
+  background-color: #ccc; /* greyed out */
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .general-contact {
@@ -730,4 +748,10 @@ swiper-container::part(button-next) {
   padding-right: 10vw;
   }
 
+}
+
+.privacy-policy{
+  color: #f5f5f5;
+  max-width: 75vw;
+  align-items: center;
 }
