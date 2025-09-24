@@ -242,6 +242,16 @@ header {
     .page-title h1{
       display: none;
     }
+
+    .contact-text {
+      white-space: nowrap;
+      font-size: calc(1.25rem + 0.5vw);
+    }
+    
+
+    form.callback-form {
+      min-width: 100vw;
+    }
   } 
   
   /* --- BUTTON STYLING ---- */
@@ -408,6 +418,7 @@ header {
   .card-content p {
     display: none; /* Hide text on mobile */
   }
+
 }
 
 h2{
@@ -549,6 +560,7 @@ h2{
   justify-items: center;
   background-color:#000;
   overflow: hidden;
+  align-items: center;
 }
 
 .contact-text{
@@ -557,20 +569,8 @@ h2{
   padding-right: 0.5em;
 }
 
-.callback-form-section {
-  padding: 2em;
-  background: #f5f5f5;
-  text-align: center;
-}
-
-.callback-form-section h2 {
-  color: #e67f40;
-  margin-bottom: 1em;
-}
-
 .callback-form {
-  max-width: 50vw;
-  min-width: 25vw;
+  min-width: 50vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -607,7 +607,7 @@ h2{
 }
 
 .callback-form button:hover {
-  background-color: #e67f40;
+  background-color: #000;
 }
 
 .general-contact {
