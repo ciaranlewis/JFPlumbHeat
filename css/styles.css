@@ -102,6 +102,9 @@ header {
     transition: 0.5s;
   }
 
+  .logo-link:hover{
+    transform: none;
+  }
   .desktop-nav a:hover {
 
     color: #000;
@@ -210,9 +213,6 @@ header {
   width: 30px;
   height: 30px;
 }
-
-
-
 
   @media (max-width: 1126px) {
     .menu-toggle {
@@ -529,6 +529,14 @@ h2{
   }
 }
 
+/* Page title styling */
+.page-title{
+  display: flex;
+  justify-content: center;
+  color:#FFF;
+  background-color: #000;
+}
+
 /* CONTACT PAGE STYLING */
 .contact-body{
   background-color:#e67f40 ;
@@ -641,7 +649,7 @@ h2{
   justify-content: center;
   gap: 2rem;
   padding: 2em;
-  background-color: #e67f40;
+  background-color: #000;
   overflow-x: hidden;
   max-width: 100%;
 }
