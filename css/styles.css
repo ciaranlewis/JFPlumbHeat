@@ -5,12 +5,13 @@ html, body {
   height: 100%;  /* Ensure full height of the page */
 }
 body {
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f9f9f9;
-    color: #333;
-    overflow-x: hidden;
+  font-family: "avenir-next-lt-pro", sans-serif;
+  font-weight: 2em;
+  font-style: normal;    margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;
 
   }
 
@@ -33,13 +34,13 @@ header {
 
   main {
     background-color: #e67f40;
-    padding-top: 1em;
   }
 
 /* --- HEADER STYLING ---- */
   .header-container {
     display: flex;
     align-items: stretch;
+    justify-content: center;
   }
   
   /* Logo sits on left edge */
@@ -52,26 +53,38 @@ header {
   }
   
   /* Right section: stacks title and nav */
-  .header-right {
+  /* .header-right {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
     flex: 1;
-  }
+  } */
   
   /* Title styling */
-  .header-right h1 {
+  /* .header-right h1 {
     margin: 0;
     font-size: 3em;
-  }
+  } */
 
-  /* Navigation styling */
-  .desktop-nav {
-    margin-top: 0.5em;
-    font-size: 1.5em;
+  .navigation-links {
+    background-color: #e67f40;
+    padding: 0.5em;
+  
+    /* Make this a flex container so we can center .desktop-nav */
     display: flex;
-    align-items: center; 
+    justify-content: center; /* centers .desktop-nav horizontally */
+    align-items: center;     /* centers .desktop-nav vertically */
+  }
+  
+  .desktop-nav {
+    font-size: 1.5em;
+  
+    /* flex to space the links inside it evenly */
+    display: flex;
+    align-items: center;      /* vertically center the link text */
+    justify-content: center;  /* horizontally center the links */
+    gap: 1.5em;               /* optional: space between links */
   }
   
   /* Navigation link styling */
@@ -82,7 +95,18 @@ header {
     align-items: center;
     display: flex;
     align-items: center;
-  } 
+  }
+
+  a:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+
+  .desktop-nav a:hover {
+
+    color: #000;
+  }
+
 
   .mobile-nav-wrapper {
     position: fixed;
@@ -209,6 +233,10 @@ header {
     .header-container {
       flex-direction: column;
       align-items: center;
+    }
+
+    .navigation-links{
+      display: none;
     }
   } 
   
