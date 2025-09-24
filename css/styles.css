@@ -332,6 +332,8 @@ header {
   gap: 2em;
   justify-content: center;
   padding: 2em;
+  align-items: stretch;   /* ✅ make all children the same height */
+
 }
 
 /* === Card Layout === */
@@ -346,6 +348,8 @@ header {
   flex-direction: column;
   transition: transform 0.3s ease;
   position: relative;
+  height: 100%;       /* ✅ stretch to match tallest sibling */
+
 }
 
 .service-card img {
