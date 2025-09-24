@@ -238,6 +238,10 @@ header {
     .navigation-links{
       display: none;
     }
+
+    .page-title h1{
+      display: none;
+    }
   } 
   
   /* --- BUTTON STYLING ---- */
