@@ -754,4 +754,5 @@ swiper-container::part(button-next) {
   color: #f5f5f5;
   max-width: 75vw;
   align-items: center;
+  justify-content: center;
 }
