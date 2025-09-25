@@ -753,6 +753,9 @@ swiper-container::part(button-next) {
 .privacy-policy{
   color: #f5f5f5;
   max-width: 75vw;
-  align-items: center;
-  justify-content: center;
+  display: flex;               /* make it a flex container */
+  flex-direction: column;      /* stack child elements vertically if needed */
+  align-items: center;         /* centre children horizontally */
+  justify-content: center;     /* centre children vertically */
+  margin: 0 auto;
 }
