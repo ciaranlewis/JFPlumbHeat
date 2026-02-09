@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
   function loadAllGalleries() {
-    fetch('/static/gallery/media.json')
+    fetch('media.json')
       .then(res => res.json())
       .then(data => {
         Object.entries(data).forEach(([galleryId, files]) => {
