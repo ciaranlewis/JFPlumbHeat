@@ -45,6 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const bgVideo = document.querySelector('.bg-video');
+    if (bgVideo) {
+      bgVideo.play().catch(err => {
+        console.warn('Autoplay prevented:', err);
+      });
+    }
+  });
+  
   
 
   const checkbox = document.getElementById('privacy-consent');
