@@ -5,17 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
 function loadAllGalleries() {
   fetch('static/gallery/media.json')
     .then(res => {
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
+      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       return res.json();
     })
     .then(data => {
       Object.entries(data).forEach(([galleryId, files]) => {
-        if (!Array.isArray(files)) {
-          console.warn(`Skipping ${galleryId}: files is not an array`, files);
-          return;
-        }
+        if (!Array.isArray(files)) return;
 
         const container = document.querySelector(`#${galleryId} swiper-container`);
         if (!container) return;
@@ -26,23 +21,17 @@ function loadAllGalleries() {
 
           if (/\.(mp4|webm)$/i.test(file)) {
             slide.innerHTML = `
-              <video src="${src}" muted loop playsinline controls loading="lazy"></video>
+              <video src="${src}" muted loop playsinline controls></video>
             `;
           } else {
             slide.innerHTML = `
-              <img
-                data-src="${src}"
-                class="swiper-lazy"
-                alt=""
-              >
-              <div class="swiper-lazy-preloader"></div>
+              <img src="${src}" loading="lazy" alt="">
             `;
           }
 
           container.appendChild(slide);
         });
 
-        // Ensure Swiper initializes AFTER slides exist
         container.initialize();
       });
     })
