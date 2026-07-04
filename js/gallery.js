@@ -58,21 +58,41 @@
   }
 
   function buildMediaElement(key, filename) {
+    let el;
     if (isVideo(filename)) {
-      const video = document.createElement("video");
-      video.className = "gallery-media";
-      video.src = mediaUrl(key, filename);
-      video.muted = true;
-      video.loop = true;
-      video.autoplay = true;
-      video.playsInline = true;
-      return video;
+      el = document.createElement("video");
+      el.src = mediaUrl(key, filename);
+      el.muted = true;
+      el.loop = true;
+      el.autoplay = true;
+      el.playsInline = true;
+    } else {
+      el = document.createElement("img");
+      el.src = mediaUrl(key, filename);
+      el.alt = titleFor(key);
     }
-    const img = document.createElement("img");
-    img.className = "gallery-media";
-    img.src = mediaUrl(key, filename);
-    img.alt = titleFor(key);
-    return img;
+    // Starts invisible; fadeInWhenReady() reveals it once loaded so we
+    // never show the empty/background flash while the source loads.
+    el.className = "gallery-media is-entering";
+    return el;
+  }
+
+  // Waits for the media to actually have a frame to show, then removes
+  // the class on the next frame so the opacity transition reliably fires
+  // (removing it synchronously for cached/complete media wouldn't animate).
+  function fadeInWhenReady(el) {
+    const reveal = () => requestAnimationFrame(() => el.classList.remove("is-entering"));
+    if (el.tagName === "IMG") {
+      if (el.complete) {
+        reveal();
+      } else {
+        el.addEventListener("load", reveal, { once: true });
+        el.addEventListener("error", reveal, { once: true });
+      }
+    } else {
+      el.addEventListener("loadeddata", reveal, { once: true });
+      el.addEventListener("error", reveal, { once: true });
+    }
   }
 
   function buildGalleryBlock(key, files) {
@@ -92,11 +112,26 @@
 
     let mediaEl = buildMediaElement(key, items[currentIndex]);
     viewer.appendChild(mediaEl);
+    fadeInWhenReady(mediaEl);
 
     function render() {
+      const oldMediaEl = mediaEl;
       const newMediaEl = buildMediaElement(key, items[currentIndex]);
-      viewer.replaceChild(newMediaEl, mediaEl);
+      // Insert as the first child (not appendChild) so it stays behind
+      // the prev/next buttons instead of covering and blocking them.
+      viewer.insertBefore(newMediaEl, viewer.firstChild);
       mediaEl = newMediaEl;
+      fadeInWhenReady(newMediaEl);
+
+      // Keep the old element underneath until the new one has fully
+      // faded in, so there's always a frame on screen — no flash.
+      newMediaEl.addEventListener(
+        "transitionend",
+        () => {
+          if (oldMediaEl.parentNode === viewer) viewer.removeChild(oldMediaEl);
+        },
+        { once: true }
+      );
     }
 
     if (items.length > 1) {

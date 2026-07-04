@@ -722,6 +722,12 @@ color: #ccc;
   height: 100%;
   object-fit: cover;
   display: block;
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+
+.gallery-media.is-entering {
+  opacity: 0;
 }
 
 /* ---------- Arrows ---------- */
