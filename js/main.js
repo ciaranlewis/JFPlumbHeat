@@ -62,9 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-  
-  
-  
+
+  document.addEventListener('DOMContentLoaded', () => {
 
   const checkbox = document.getElementById('privacy-consent');
   const submitButton = document.getElementById('submit-button');
@@ -73,5 +72,30 @@ document.addEventListener('DOMContentLoaded', () => {
   checkbox.addEventListener('change', () => {
     submitButton.disabled = !checkbox.checked;
   });
+  });
+const slides = document.querySelectorAll(".slide");
+const slider = document.querySelector(".slider");
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
 
- 
+let currentSlide = 0;
+let slideCount = slides.length
+
+// slides.forEach((_, index) => {
+
+// })
+
+function goToSlide(index){
+  currentSlide = (index + slideCount) % slideCount;
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+function handleNextSlide(){
+  goToSlide(currentSlide + 1)
+}
+
+function handlePrevSlide(){
+  goToSlide(currentSlide - 1)
+}
+
+prevButton.addEventListener("click", handlePrevSlide)
+nextButton.addEventListener("click", handleNextSlide)

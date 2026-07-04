@@ -9,9 +9,10 @@ body {
   font-weight: 2em;
   font-style: bold;    margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  background: #000;
   color: #333;
   overflow-x: hidden;
+  font-size: 1.5em;
 
   }
 
@@ -449,9 +450,6 @@ h2{
   background: #000;
 }
 
-
-
-
 .testimonial-post {
   background: white;
   padding: 2em;
@@ -679,76 +677,69 @@ color: #ccc;
   background-color: #000;
   overflow-x: hidden;
   max-width: 100%;
+  scrollbar-width: none;
 }
 
-.gallery-block {
-  flex: 1 1 300px;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  }
-
-.gallery-block h2 {
-  margin-bottom: 1em;
-  color: #f5f5f5;
-  font-size: 1.5em;
-  margin-top: 0em;
-  padding-top: 0em;
-
-}
-
-.gallery-swiper {
+.slider-container{
+  width: 100%;
+  max-width: 800px;
+  max-height: 400px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16pc rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slider{
+  display: flex;
+  transition: transform 0.5s ease;
 
   width: 100%;
-  border-radius: 10px;
-  overflow: hidden;
 }
 
-swiper-slide {
+.slide{
+  min-width: 100%;
+  height: 100%;
+}
+
+.slider-arrow{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5); /* 50% opacity black */
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.slider-arrow:hover{
+  background: rgba(255, 255, 255, 0.2)
+}
+
+.slider-arrow svg{
+  width: 4rem;
+  color: #e67f40;
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-
 }
 
-swiper-slide img,
-swiper-slide video {
-  max-width: 100%;
-  max-height: 60vh;
-  object-fit: contain;
-  border-radius: 10px;
+.prev{
+  left: 20px;
+}
+
+.next{
+  right:20px;
 }
 
 
-
-
-/* Hide arrows by default */
-swiper-container::part(button-prev),
-swiper-container::part(button-next) {
-  display: block;
-  color: #f5f5f5;
-  font-size: 1.5rem;}
-
-@media (max-width: 767px) {
-  swiper-container::part(button-prev),
-  swiper-container::part(button-next) {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    padding-right: 15vw;
-    padding-left: 15vw;
-  }
-  swiper-slide {
-  padding-left: 10vw;
-  padding-right: 10vw;
-  }
-
-}
 
 .privacy-policy{
   color: #f5f5f5;
@@ -759,13 +750,3 @@ swiper-container::part(button-next) {
   justify-content: center;     /* centre children vertically */
   margin: 0 auto;
 }
-
-/* Add this to your css/styles.css.
-   Hides the volume/mute toggle on gallery videos (Safari/Chrome on
-   WebKit-based browsers) so there's no UI path to unmuted sound at all,
-   on top of the JS-enforced muted = true in gallery.js. */
-
-   .gallery-swiper video::-webkit-media-controls-mute-button,
-   .gallery-swiper video::-webkit-media-controls-volume-slider {
-     display: none !important;
-   }

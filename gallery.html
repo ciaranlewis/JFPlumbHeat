@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="https://use.typekit.net/sgw5ddm.css">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <script src="js/main.js" defer></script>
-    <script src="js/gallery.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   </head>
 
   <body>
@@ -61,109 +58,55 @@
     <div class="page-title">
       <h1>Gallery</h1>
     </div>
-
+    
     <main class="gallery-main">
-      <div class="gallery-block" id="bathroom">
-        <h2>Full bathroom refurbishment</h2>
-        <swiper-container
-          class="gallery-swiper"
-          navigation="true"
-          pagination="false"
-          lazy="true"
-          preload-images="false">
-        </swiper-container>
-      </div>
+        <div class = "slider-container">
+            <div class ="slider">
+                <div class = "slide active">
+                    <img src = "static/gallery/bathroom/pic (1).jpg">
+                </div>
 
-      <div class="gallery-block" id="boiler_upgrades">
-        <h2>Boiler and cylinder upgrades</h2>
-        <swiper-container
-          class="gallery-swiper" 
-          navigation="true" 
-          pagination="false"
-          lazy="true"
-          preload-images="false">
-        </swiper-container>
-      </div>
+                <div class = "slide">
+                    <img src = "static/gallery/bathroom/pic (2).jpg">
+                </div>
 
-      <div class="gallery-block" id="plumb_inst">
-        <h2>Full plumbing installations</h2>
-        <swiper-container 
-          class="gallery-swiper" 
-          navigation="true" 
-          pagination="false"
-          lazy="true"
-          preload-images="false">
-        </swiper-container>
-      </div>
+                <div class = "slide">
+                    <img src = "static/gallery/bathroom/pic (3).jpg">
+                </div>
+            </div>
+            <div class = "slider-nav"></div>  
+            <div class = "slider-arrow prev">
+                <span class = "arrow-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                      </svg>                                                             
+                </span>
+            </div>
+            <div class = "slider-arrow next">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                  </svg>                                               
+                </span>
+            </div>
+        </div>
 
-      <div class="gallery-block" id="ufh">
-        <h2>Underfloor heating</h2>
-        <swiper-container 
-          class="gallery-swiper"
-          navigation="true"
-          pagination="false"
-          lazy="true"
-          preload-images="false">
-        </swiper-container>
-      </div>
 
-      <div class="gallery-block" id="gas_works">
-        <h2>Domestic gas works</h2>
-        <swiper-container
-          class="gallery-swiper"
-          navigation="true"
-          pagination="false"
-          lazy="true"
-          preload-images="false">
-        </swiper-container>
-      </div>
-
-      <div class="gallery-block" id="boiler_service">
-        <h2>Boiler servicing</h2>
-        <swiper-container
-          class="gallery-swiper"
-          navigation="true"
-          pagination="false"
-          lazy="true"
-          preload-images="false">
-        </swiper-container>
-      </div>
-
-      <div class="gallery-block" id="gas_safety">
-        <h2>Gas safety inspections</h2>
-        <swiper-container
-          class="gallery-swiper"
-          navigation="true"
-          pagination="false"
-          lazy="true"
-          preload-images="false">
-        </swiper-container>
-      </div>
-
-      <div class="gallery-block" id="maintenance">
-        <h2>Plumbing maintenance</h2>
-        <swiper-container
-          class="gallery-swiper"
-          navigation="true"
-          pagination="false"
-          lazy="true"
-          preload-images="false">
-        </swiper-container>
-      </div>
     </main>
 
     <footer>
-      <section class="bottom-nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="https://wa.me/+447368482481" class="social-icon" target="_blank" aria-label="WhatsApp">
-          <img src="static/whatsapp.png" alt="WhatsApp" loading="lazy">
-        </a>
-        <a href="https://www.instagram.com/jf_plumbingheating?igsh=MWI4eGpreHZ6dHM4Yg==" class="social-icon" target="_blank" aria-label="Instagram">
-          <img src="static/instagram.png" alt="Instagram" loading="lazy">
-        </a>
-        <p>&copy; 2025 JF Plumbing & Heating</p>
-      </section>
-    </footer>
+        <section class="bottom-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="https://wa.me/+447368482481" class="social-icon" target="_blank" aria-label="WhatsApp">
+            <img src="static/whatsapp.png" alt="WhatsApp" loading="lazy">
+          </a>
+          <a href="https://www.instagram.com/jf_plumbingheating?igsh=MWI4eGpreHZ6dHM4Yg==" class="social-icon" target="_blank" aria-label="Instagram">
+            <img src="static/instagram.png" alt="Instagram" loading="lazy">
+          </a>
+          <p>&copy; 2025 JF Plumbing & Heating</p>
+        </section>
+      </footer>
+      <script src="js/main.js" defer></script>
+
   </body>
 </html>
