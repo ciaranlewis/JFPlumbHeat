@@ -677,44 +677,58 @@ color: #ccc;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  padding: 2em;
+  /* gap: 2rem; */
+  padding: 0 0 2vh 0;
   background-color: #000;
   overflow-x: hidden;
   max-width: 100%;
   scrollbar-width: none;
 }
 
-.slider-container{
+.gallery-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔥 KEY FIX: give the slider a real responsive height */
+.slider-container {
   width: 100%;
-  max-width: 800px;
-  max-height: 400px;
+  max-width: 50vw;
+  
+  aspect-ratio: 1 / 1;   /* perfect for iPhone portrait photos */
+  
   margin: 0 auto;
   border-radius: 12px;
-  box-shadow: 0 8px 16pc rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.slider{
+/* slider track */
+.slider {
   display: flex;
-  transition: transform 0.5s ease;
-
+  height: 100%;
   width: 100%;
+  transition: transform 0.5s ease;
 }
 
-.slide{
+/* each slide */
+.slide {
   min-width: 100%;
   height: 100%;
 }
 
+/* image fills slide properly */
+.slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
 .slider-arrow{
   position: absolute;
   top:50%;
