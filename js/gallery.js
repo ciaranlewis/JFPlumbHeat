@@ -4,6 +4,12 @@
 // on mobile — native `loading="lazy"` on <img> only defers image bytes,
 // it does nothing for <video>, and it doesn't stop the browser from having
 // to hold hundreds of DOM nodes at once if they're all created immediately.
+//
+// Within an already-visible gallery, image loading is handled by Swiper's
+// own lazy module (data-src + swiper-lazy class) rather than the browser's
+// native loading="lazy". Swiper's version knows it's a carousel and
+// preloads the current slide plus its immediate neighbours, so swiping
+// doesn't cause the next image to pop in mid-drag.
 
 let mediaDataPromise = null;
 
@@ -23,6 +29,10 @@ function buildGallery(galleryId, files) {
   if (!container || container.dataset.built === 'true') return;
   container.dataset.built = 'true';
 
+  // Preload the current slide plus 1 neighbour on each side, so the next
+  // slide is already loaded by the time a swipe reaches it.
+  container.lazyPreloadPrevNext = 1;
+
   files.forEach(file => {
     const slide = document.createElement('swiper-slide');
     const src = `static/gallery/${galleryId}/${encodeURIComponent(file)}`;
@@ -36,8 +46,12 @@ function buildGallery(galleryId, files) {
         <video src="${src}" muted loop playsinline controls preload="none"></video>
       `;
     } else {
+      // Swiper's lazy module: data-src + swiper-lazy class instead of a
+      // plain src attribute. The preloader div gives a small spinner
+      // while the image is still loading in.
       slide.innerHTML = `
-        <img src="${src}" loading="lazy" alt="">
+        <img data-src="${src}" class="swiper-lazy" alt="">
+        <div class="swiper-lazy-preloader"></div>
       `;
     }
 
