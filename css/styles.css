@@ -759,3 +759,13 @@ swiper-container::part(button-next) {
   justify-content: center;     /* centre children vertically */
   margin: 0 auto;
 }
+
+/* Add this to your css/styles.css.
+   Hides the volume/mute toggle on gallery videos (Safari/Chrome on
+   WebKit-based browsers) so there's no UI path to unmuted sound at all,
+   on top of the JS-enforced muted = true in gallery.js. */
+
+   .gallery-swiper video::-webkit-media-controls-mute-button,
+   .gallery-swiper video::-webkit-media-controls-volume-slider {
+     display: none !important;
+   }
