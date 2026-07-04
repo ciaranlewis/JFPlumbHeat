@@ -25,27 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const swipers = document.querySelectorAll(".mySwiper");
-  
-    swipers.forEach((swiperEl) => {
-      new Swiper(swiperEl, {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        pagination: {
-          el: swiperEl.querySelector(".swiper-pagination"),
-          clickable: true,
-        },
-        navigation: {
-          nextEl: swiperEl.querySelector(".swiper-button-next"),
-          prevEl: swiperEl.querySelector(".swiper-button-prev"),
-        },
-      });
-    });
-  });
-
   document.addEventListener('DOMContentLoaded', () => {
     const bgVideo = document.querySelector('.bg-video');
     if (bgVideo) {
