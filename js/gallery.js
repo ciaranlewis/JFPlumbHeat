@@ -2,7 +2,7 @@
   "use strict";
 
   // ---------- Config ----------
-  const MANIFEST_PATH = "/static/gallery/media.json";
+  const MANIFEST_PATH = "static/gallery/media.json";
   const MEDIA_BASE = "/static/gallery/"; // + {key}/{filename}
   const CONTAINER_SELECTOR = "#gallery-grid";
 

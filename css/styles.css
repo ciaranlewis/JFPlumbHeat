@@ -695,22 +695,22 @@ color: #ccc;
 .gallery-title {
   margin: 0;
   padding: 0.9rem 1rem;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  background: #1c2b3a;
+  background: #e67f40;
   color: #fff;
 }
 
 /* Block with no media yet — title only */
 .gallery-block.is-empty .gallery-title {
-  background: #55636f;
+  background: #e67f40;
 }
 
 /* ---------- Viewer (image/video area) ---------- */
 .gallery-viewer {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   background: #eee;
   overflow: hidden;
 }
@@ -734,7 +734,7 @@ color: #ccc;
   border: none;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.45);
-  color: #fff;
+  color: #e67f40;
   font-size: 1.3rem;
   line-height: 1;
   cursor: pointer;
